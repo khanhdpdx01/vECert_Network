@@ -1,0 +1,10 @@
+.env
+/base
+/organizations/ordererOrganizations
+/organizations/peerOrganizations
+log.txt
+/bin
+/channel-artifacts
+/organizations/fabric-ca/ordererOrg/fabric-ca-server-config.yaml
+/organizations/fabric-ca/org1/fabric-ca-server-config.yaml
+/organizations/fabric-ca/org2/fabric-ca-server-config.yaml
