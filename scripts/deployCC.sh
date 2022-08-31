@@ -155,6 +155,7 @@ commitChaincodeDefinition 1 2
 queryCommitted 1
 queryCommitted 2
 
+
 ## Invoke the chaincode - this does require that the chaincode have the 'initLedger'
 ## method defined
 if [ "$CC_INIT_FCN" = "NA" ]; then
@@ -162,5 +163,9 @@ if [ "$CC_INIT_FCN" = "NA" ]; then
 else
   chaincodeInvokeInit 1 2
 fi
+
+set -x
+peer channel fetch newest mychannel.block -o localhost:7050 --ordererTLSHostnameOverride orderer.com -c mychannel --tls --cafile "$ORDERER_CA"
+{ set +x; } 2>/dev/null
 
 exit 0

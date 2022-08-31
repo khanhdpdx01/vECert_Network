@@ -75,7 +75,6 @@ fi
 . scripts/ccutils.sh
 
 packageChaincode() {
-
   address="{{.peername}}_${CC_NAME}_ccaas:${CCAAS_SERVER_PORT}"
   prefix=$(basename "$0")
   tempdir=$(mktemp -d -t "$prefix.XXXXXXXX") || error_exit "Error creating temporary directory"
