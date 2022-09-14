@@ -88,6 +88,8 @@ parsePeerConnectionParameters() {
     PEER_CONN_PARMS=("${PEER_CONN_PARMS[@]}" "${TLSINFO[@]}")
     # shift by one to get to the next organization
     shift
+
+    
   done
 }
 
